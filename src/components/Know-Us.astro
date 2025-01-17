@@ -1,0 +1,35 @@
+---
+
+import {Image} from 'astro:assets'
+import BGHome from '../images/bg-home.webp'
+---
+
+
+<section class="text-[#266388] my-24">
+    <article class="flex justify-center items-center w-full">
+        <div class="w-1/12 bg-[#3aa0cd]/20 h-52">
+         <br>
+        </div>
+        <img src={BGHome.src} alt="Imagen de las butacas de los salones de clases del Colegio Crica en Chilpancingo, Guerrero" class="w-5/12 h-60 rounded-lg object-cover">
+        <div class="bg-[#3aa0cd]/20 w-6/12 pl-24 py-5">
+            <h3 class="font-extrabold text-3xl">Valores</h3>
+            <ol class="mt-4">
+                <li>1. Amar a Dios.</li>
+                <li>2. Amar a su familia, a la sociedad y a su país.</li>
+                <li>3. Amar el deporte y las artes.</li>
+                <li>4. Amar el estudio y la superación.</li>
+                <li>5. Amar el dar y servir.</li>
+            </ol>
+        </div>
+    </article>
+    <article class="flex justify-center bg-[#3aa0cd]/20 full gap-5 py-10 mt-10">
+        <div class="w-6/12 pr-6">
+            <h3 class="font-extrabold text-3xl">Misión</h3>
+            <p class="mt-4">Proveer una educación integral basada en principios y valores que promuevan en el alumno el desarrollo de competencias para que todo su ser espíritu, alma y cuerpo sean llevados a la excelencia.</p>
+        </div>
+        <div class="w-4/12">
+            <h3 class="font-extrabold text-3xl">Visión</h3>
+            <p class="mt-4">Alcanzar la formación de individuos que tengan fe en Dios virtud de carácter y lleguen a la plenitud del conocimiento en todas las áreas.</p>
+        </div>
+    </article>
+</section>

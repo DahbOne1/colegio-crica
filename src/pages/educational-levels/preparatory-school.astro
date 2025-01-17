@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import Header from "../../components/Header.astro"
+import Footer from "../../components/Footer.astro"
+import {Image} from 'astro:assets'
+import BGHome from '../images/bg-home.webp'
+---
+
+<Layout title="Colegio Crica A. C. - Educar en integridad para servir con excelencia. | Colegio privado con principios cristianos en Chilpancingo de los Bravo, Guerrero.">
+	<Header></Header>
+	<main>
+		<section>
+            <h4>BACHILLERATO</h4>
+            <p>
+            </p>
+            <article>
+                <h6></h6>
+                <p></p>
+                <div>
+
+                </div>
+            </article>
+            
+            <article>
+                <h6></h6>
+                <p></p>
+                <div></div>
+            </article>
+           
+            <img src="" alt="">
+            <div>
+                <p>El Colegio Crica A. C. ofrece el nivel de bachillerato con una duración de tres años, en los cuales se busca formar jóvenes con una educación integral, que les permita enfrentar los retos de la vida con una actitud positiva y constructiva.</p>
+                <p>El plan de estudios del bachillerato está diseñado para que los alumnos adquieran los conocimientos, habilidades y actitudes necesarias para continuar con éxito sus estudios universitarios, así como para que desarrollen su capacidad de análisis, reflexión y toma de decisiones.</p>
+                <p>El Colegio Crica A. C. ofrece a los alumnos del bachillerato un ambiente de aprendizaje seguro y estimulante, en el que se fomenta el trabajo en equipo, la creatividad, la innovación y el liderazgo.</p>
+                <p>El Colegio Crica A. C. cuenta con un equipo de profesores altamente calificados, que se esfuerzan por brindar a los alumnos una educación de calidad, que les permita alcanzar sus metas y cumplir sus sueños.</p>
+            </div>
+            <img src={BGHome.src} alt="Imagen edificio principal del Colegio Crica en Chilpancingo, Guerrero" class="w-9/12 rounded-xl h-7 object-cover object-left-top">
+        </section>
+	</main>
+	<Footer></Footer>	
+	
+</Layout>

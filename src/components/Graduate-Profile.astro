@@ -1,0 +1,48 @@
+---
+import {Image} from 'astro:assets'
+import BGHome from '../images/bg-home.webp'
+
+const ITEMS_GRADUATE_PROFILE = [
+    {
+        urlIcon: "",
+        name: "Apoyo al deporte y las artes",
+        description: "Promovemos el equilibrio entre mente y cuerpo, incentivando el amor por el deporte y las artes.",
+    },
+    {
+        urlIcon: "",
+        name: "Espíritu de servicio y generosidad",
+        description: "Valoramos la generosidad y el servicio, formando individuos comprometidos con dar y servir a los demás.",
+    },
+    {
+        urlIcon: "",
+        name: "Amor a la familia y sociedad",
+        description: "Fomentamos el amor y respeto por la familia, la sociedad y el país, creando ciudadanos responsables y comprometidos.",
+    },
+    {
+        urlIcon: "",
+        name: "Amor y Espiritualidad",
+        description: "Nuestros egresados aprenden a amar a Dios y llevar una vida guiada por principios espirituales.",
+    }
+    
+]
+import ItemGraduateProfile from './Item-Graduate-Profile.astro'
+---
+
+<section class="py-20 flex px-10 text-[#266388]">
+    <div class="w-2/5 p-3">
+        <h2 class="font-extrabold text-4xl">PERFIL DE NUESTROS EGRESADOS</h2>
+        <span class="font-semibold text-3xl block mt-4`">Formando líderes con valores</span>
+        <img src={BGHome.src} alt="Imagen edificio principal del Colegio Crica en Chilpancingo, Guerrero" class="w-full h-48 mt-4 rounded-lg object-cover object-left-top">
+    </div>
+    <article class="w-3/5 p-1">
+        <ol class="flex gap-4 flex-wrap justify-center">
+            {
+                ITEMS_GRADUATE_PROFILE.map((itemGraduateProfile)=>(
+                    <li class="w-5/12">
+                        <ItemGraduateProfile {...itemGraduateProfile}></ItemGraduateProfile>
+                    </li>
+                ))
+            }
+        </ol>
+    </article>
+</section>
