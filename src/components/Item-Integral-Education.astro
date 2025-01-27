@@ -10,14 +10,17 @@ import ReadMore from './icons/Read-more.astro'
 ---
 
 <div class=`cursor-pointer hover:scale-105 transition-all relative w-60`>
-    <img src={urlImage} alt={descriptionImage} class="h-96 w-full rounded-2xl cover">
+    <img src={urlImage} alt={descriptionImage} class="h-96 w-full rounded-2xl object-cover">
     <div class="w-full absolute bottom-0 left-0 font-semibold text-xl text-[#f2f9fd] p-3">
         <h4 class="font-bold text-md">{name}</h4>
         <!-- Modal toggle -->
-        <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="mt-5 flex w-full text-[#f9fbfb] bg-[#217aa1] hover:bg-[#217aa1]/80  font-medium rounded-md text-sm py-1 px-3 text-left" type="button">
+        <button id={name} data-modal-target="default-modal" data-modal-toggle="default-modal" class="mt-5 flex w-full text-[#f9fbfb] bg-[#217aa1] hover:bg-[#217aa1]/80  font-medium rounded-md text-sm py-1 px-3 text-left" type="button">
             Leer mas
             <ReadMore></ReadMore>
         </button>
     </div>
+
+    
     
 </div>
+
