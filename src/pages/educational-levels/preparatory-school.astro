@@ -3,38 +3,260 @@ import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import {Image} from 'astro:assets'
-import BGHome from '../images/bg-home.webp'
+
+
+const ITEMS_SEMESTERS = [
+{
+    numberSemester: "1",
+    nameSemester: "Primer semestre",
+    subjects:[
+        {
+            1: "Matemáticas I",
+            2: "Química I",
+            3: "Etica y valores I",
+            4: "Introducción a las ciencias sociales",
+            5: "Taller de lectura y redacción I",
+            6: "Lengua adicional al español I",
+            7: "Informática I",
+            8: "Actividades para escolares I",
+            9: "Vision empresarial",
+            10: "Italiano I",
+            11: "Formación de vida"
+        }
+    ]
+    
+},
+{
+    numberSemester: "2",
+    nameSemester: "Segundo semestre",
+    subjects:[
+        {
+            1: "Matemáticas II",
+            2: "Química II",
+            3: "Ética y valores II",
+            4: "Historia de méxico I",
+            5: "Taller de lectura y redacción II",
+            6: "Lengua adicional al español II",
+            7: "Informática II",
+            8: "Actividades para escolares II",
+            9: "Vision empresarial",
+            10: "Italiano II",
+            11: "Formación de vida"
+            
+        }
+    ]
+},
+{
+    numberSemester: "3",
+    nameSemester: "Tercer semestre",
+    subjects:[
+        {
+            1: "Matemáticas III",
+            2: "Física I",
+            3: "Biología I",
+            4: "Historia de méxico II",
+            5: "Literatura I",
+            6: "Lengua adicional al español III",
+            7: "Actividades para escolares III",
+            8: "Vision empresarial",
+            9: "Italiano III",
+            10: "Formación de vida",
+            11: "+2 Materias del área",
+        }
+    ]
+},
+{
+    numberSemester: "4",
+    nameSemester: "Cuarto semestre",
+    subjects:[
+        {
+            1: "Matemáticas IV",
+            2: "Física II",
+            3: "Biología II",
+            4: "Estructura socioeconómica de méxico",
+            5: "Literatura II",
+            6: "Lengua adicional al español IV",
+            7: "Actividades para escolares IV",
+            8: "Vision empresarial",
+            9: "Italiano IV",
+            10: "Formación de vida",
+            11: "+2 Materias del área",
+        }
+    ]
+},
+{
+    numberSemester: "5",
+    nameSemester: "Quinto semestre",
+    subjects:[
+        {
+            1: "Geografía",
+            2: "Historia universal contemporánea",
+            3: "Lengua adicional al español V",
+            4: "Actividades para escolares V",
+            5: "Vision empresarial",
+            6: "Italiano V",
+            7: "Formación de vida",
+            8: "+6 Materias del área",
+            9: "",
+            10: "",
+            11: ""
+        }
+    ]
+},
+{
+    numberSemester: "6",
+    nameSemester: "Sexto semestre",
+    subjects:[
+        {
+            1: "Filosofía",
+            2: "Ecología y medio ambiente",
+            3: "Actividades para escolares VI",
+            4: "Vision empresarial",
+            5: "Italiano VI",
+            6: "Formación de vida",
+            7: "+6 Materias del área",
+            8: "",
+            9: "",
+            10: "",
+            11: ""
+        }
+    ]
+}]
+
+const ITEMS_STUDY_AREAS=[
+{
+    numberArea: "1",
+    nameArea: "Higiene y salud",
+    subjects:[
+        {
+            1: "Anatomia y fisiologia I",
+            2: "Introducción a la salud pública",
+            3: "Anatomía y fisiología II",
+            4: "Crecimiento desarrollo humano y nutrición",
+            5: "Temas selectos de quimica I",
+            6: "Psiología I",
+            7: "Temas selectos de biología II",
+            8: "Temas selectos de matemáticas I",
+            9: "Higiene y salud comunitaria I",
+            10: "Salud materno infantil",
+            11: "Temas selectos de química II",
+            12: "Psicologia",
+            13: "Temas selectos de biología II",
+            14: "Temas selectos de matemáticas II",
+            15: "Higiene y salud comunitaria II",
+            16: "Introducción a la epidemiología",
+        }
+    ]
+},
+{
+    numberArea: "2",
+    nameArea: "Administración",
+    subjects:[
+        {
+            1: "Formación empresarial I",
+            2: "Administración I",
+            3: "Formación empresarial II",
+            4: "Administración II",
+            5: "Matemáticas financieras I",
+            6: "Economía I",
+            7: "Derecho I",
+            8: "Contabilidad I",
+            9: "Planeación financiera I",
+            10: "Planeación de mercadotecnia I",
+            11: "Probabilidad y estadística I",
+            12: "Economía II",
+            13: "Derecho II",
+            14: "Contabilidad II",
+            15: "Planeación financiera II",
+            16: "Planeación de mercadotecnia II",
+        }
+    ]
+}
+]
 ---
+
 
 <Layout title="Colegio Crica A. C. - Educar en integridad para servir con excelencia. | Colegio privado con principios cristianos en Chilpancingo de los Bravo, Guerrero.">
 	<Header></Header>
 	<main>
-		<section>
-            <h4>BACHILLERATO</h4>
-            <p>
+		<section class="pt-20 pb-12 w-10/12 mx-auto text-[#266388]">
+            <h4 class="text-3xl  font-extrabold py-8 text-center">BACHILLERATO | <strong>C.C.T. 12PBH0051D</strong></h4>
+            <p class="text-justify">
+                En nuestro colegio, el nivel de bachillerato está diseñado para ofrecer a los estudiantes una experiencia educativa completa, en un ambiente moderno que fomenta el aprendizaje, la creatividad y el desarrollo personal.
+                Más allá de las herramientas académicas y tecnológicas, nos esforzamos por formar jóvenes íntegros y responsables, con un enfoque en el desarrollo del carácter, la ética y los valores fundamentales para su vida personal y profesional.
             </p>
-            <article>
-                <h6></h6>
-                <p></p>
-                <div>
-
+            <article class="py-8">
+                <h6 class="text-2xl font-semibold">Mapa curricular</h6>
+                <p class="p-0">El plan de estudios del bachillerato está diseñado para brindar una formación integral a nuestros estudiantes, preparándolos tanto para la educación superior como para el mundo laboral. A lo largo de seis semestres, los alumnos cursarán materias que desarrollan competencias en áreas fundamentales como ciencias, matemáticas, humanidades y tecnología, complementadas con formación en valores y ciudadanía.</p>
+                <div class="flex flex-wrap justify-center gap-4 items-stretch my-6">
+                    {
+                        ITEMS_SEMESTERS.map((itemSemester) => (
+                            <div class="py-4 bg-white rounded-xl shadow-md p-4 w-80">
+                                <h6 class="text-xl font-semibold">{itemSemester.nameSemester}</h6>
+                                <ul class="ml-8 flex flex-col gap-1 mt-4">
+                                    {
+                                        itemSemester.subjects.map((subjects,index) => (
+                                        <li>{subjects[1]}</li>
+                                        <li>{subjects[2]}</li>
+                                        <li>{subjects[3]}</li>
+                                        <li>{subjects[4]}</li>
+                                        <li>{subjects[5]}</li>
+                                        <li>{subjects[6]}</li>
+                                        <li>{subjects[7]}</li>
+                                        <li>{subjects[8]}</li>
+                                        <li>{subjects[9]}</li>
+                                        <li>{subjects[10]}</li>
+                                        <li>{subjects[11]}</li>
+                                    ))
+                                    }
+                                </ul>
+                            </div>
+                        ))
+                    }
                 </div>
             </article>
             
             <article>
-                <h6></h6>
-                <p></p>
-                <div></div>
+                <h6 class="text-2xl font-semibold">Áreas de educación</h6>
+                <p class="p-0">Desde el tercer semestre, los estudiantes pueden elegir entre dos enfoques de estudio que les proporcionan herramientas clave para su futuro académico y profesional:</p>
+                <p> <span class="font-semibold">Administración:</span>  Este enfoque está diseñado para aquellos interesados en el mundo de los negocios, la gestión y el emprendimiento.</p>
+                <p>
+                    <span class="font-semibold">Higiene y Salud:</span>  Este enfoque está dirigido a estudiantes interesados en el campo de la salud y el bienestar.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-8 items-stretch my-6">
+                    
+                    {
+                        ITEMS_STUDY_AREAS.map((itemAreas) => (
+                            <div class="py-4 bg-white rounded-xl shadow-md p-4 w-96">
+                                <h6 class="text-xl font-semibold">{itemAreas.nameArea}</h6>
+                                <ul class="ml-8 flex flex-col gap-1 mt-4">
+                                    {
+                                        itemAreas.subjects.map((subjects,index) => (
+                                        <li>{subjects[1]}</li>
+                                        <li>{subjects[2]}</li>
+                                        <li>{subjects[3]}</li>
+                                        <li>{subjects[4]}</li>
+                                        <li>{subjects[5]}</li>
+                                        <li>{subjects[6]}</li>
+                                        <li>{subjects[7]}</li>
+                                        <li>{subjects[8]}</li>
+                                        <li>{subjects[9]}</li>
+                                        <li>{subjects[10]}</li>
+                                        <li>{subjects[11]}</li>
+                                    ))
+                                    }
+                                </ul>
+                            </div>
+                        ))
+                    }
+                </div>
             </article>
            
-            <img src="" alt="">
             <div>
-                <p>El Colegio Crica A. C. ofrece el nivel de bachillerato con una duración de tres años, en los cuales se busca formar jóvenes con una educación integral, que les permita enfrentar los retos de la vida con una actitud positiva y constructiva.</p>
-                <p>El plan de estudios del bachillerato está diseñado para que los alumnos adquieran los conocimientos, habilidades y actitudes necesarias para continuar con éxito sus estudios universitarios, así como para que desarrollen su capacidad de análisis, reflexión y toma de decisiones.</p>
-                <p>El Colegio Crica A. C. ofrece a los alumnos del bachillerato un ambiente de aprendizaje seguro y estimulante, en el que se fomenta el trabajo en equipo, la creatividad, la innovación y el liderazgo.</p>
-                <p>El Colegio Crica A. C. cuenta con un equipo de profesores altamente calificados, que se esfuerzan por brindar a los alumnos una educación de calidad, que les permita alcanzar sus metas y cumplir sus sueños.</p>
+                <img src="" alt="Imagen edificio principal del Colegio Crica en Chilpancingo, Guerrero" class="w-9/12 rounded-xl h-7 object-cover object-left-top">
             </div>
-            <img src={BGHome.src} alt="Imagen edificio principal del Colegio Crica en Chilpancingo, Guerrero" class="w-9/12 rounded-xl h-7 object-cover object-left-top">
+           
         </section>
 	</main>
 	<Footer></Footer>	
