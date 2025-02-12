@@ -28,17 +28,17 @@ const ITEMS_GRADUATE_PROFILE = [
 import ItemGraduateProfile from './Item-Graduate-Profile.astro'
 ---
 
-<section class="py-20 flex px-6 text-[#266388]">
-    <div class="w-2/5 pl-4">
+<section class="py-20 flex flex-col gap-10 px-6 text-[#266388] md:flex-row">
+    <div class="w-full md:w-2/5 md:pl-4">
         <h2 class="font-extrabold text-4xl">PERFIL DE NUESTROS EGRESADOS</h2>
         <span class="font-semibold text-3xl block mt-4`">Formando líderes con valores</span>
         <img src={BGHome.src} alt="Imagen edificio principal del Colegio Crica en Chilpancingo, Guerrero" class="w-full h-52 mt-4 rounded-lg object-cover object-left-top">
     </div>
-    <article class="w-3/5 p-1">
+    <article class="w-full md:w-3/5 md:p-1">
         <ol class="flex gap-4 flex-wrap justify-center">
             {
                 ITEMS_GRADUATE_PROFILE.map((itemGraduateProfile)=>(
-                    <li class="w-5/12">
+                    <li class="w-full md:w-5/12">
                         <ItemGraduateProfile {...itemGraduateProfile}></ItemGraduateProfile>
                     </li>
                 ))

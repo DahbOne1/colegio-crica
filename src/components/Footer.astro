@@ -2,22 +2,26 @@
 import Facebook from "./icons/Facebook.astro"
 import Instagram from "./icons/Instagram.astro"
 import Whatsapp from "./icons/Whatsapp.astro"
+import Logo from '../images/Logo.png'
+import Mail from "./icons/Mail.astro"
+import Phone from "./icons/Phone.astro"
+import Pin from "./icons/Pin.astro"
 ---
 
-<footer class="bg-[#266388] text-[#f9fbfb] py-10">
-    <article class="flex">
-        <div class="w-1/4">
-
+<footer class="bg-[#266388] text-[#f9fbfb] py-5">
+    <article class="flex flex-col gap-10 justify-center items-center md:flex-row md:gap-0 md:items-start">
+        <div class="w-full md:w-1/3">
+            <img class="w-5/6 mx-auto py-2 px-6 bg-white rounded-sm" src={Logo.src} alt="Logo con fondo transparente del Colegio Crica A. C., Chilpancingo, Guerrero.">
         </div>
-        <div class="w-1/4 ">
+       <!--  <div class="w-10/12 md:w-1/4">
             <span class="font-extrabold text-xl">Sitios de interes</span>
             <ul class="flex flex-col gap-3 mt-4">
                 <li> </li>
                 <li> </li>
                 <li> </li>
             </ul>
-        </div>
-        <div class="w-1/4">
+        </div>-->
+        <div class="w-10/12 flex flex-col items-center justify-center md:w-1/3">
             <span class="font-extrabold text-xl">Redes sociales</span>
             <ul class="flex flex-col gap-3 mt-4">
                 <li><a class="flex gap-2" href="https://www.facebook.com/colegiocrica?locale=es_LA" target="_blank"><Facebook></Facebook> Colegio Crica A.C.</a> </li>
@@ -25,11 +29,12 @@ import Whatsapp from "./icons/Whatsapp.astro"
                 <li><a class="flex gap-2" href="https://wa.me/15551234567" target="_blank"><Whatsapp></Whatsapp>747 19 29 129</a> </li>
             </ul>
         </div>
-        <div class="w-1/4">
+        <div class="w-10/12 flex flex-col items-center justify-center md:w-1/3">
             <span class="font-extrabold text-xl">Contacto</span>
             <ul class="flex flex-col gap-3 mt-4">
-                <li> <p>ColegioCrica@gmail.com</p></li>
-                <li><p>C. Eleuterio Catalán Memije 5, Zona Sin Asignación de Nombre de Col 23, 39095 Chilpancingo de los Bravo, Gro.ColegioCrica@gmail.com</p></li>
+                <li><p class="flex gap-2"><Phone></Phone>747 19 29 129</p></li>
+                <li><p class="flex gap-2"><Mail></Mail>ColegioCrica@gmail.com</p></li>
+                <li><p class="flex gap-2"><Pin></Pin>C. Eleuterio Catalán Memije 5, Zona Sin Asignación de Nombre de Col 23, 39095 Chilpancingo de los Bravo, Gro.ColegioCrica@gmail.com</p></li>
             </ul>
         </div>
     </article>
