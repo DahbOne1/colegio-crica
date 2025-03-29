@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://DahbOne1/colegio-crica',
+  site: 'https://DahbOne1.github.io',
+  base: 'colegio-crica',
   integrations: [tailwind()]
 });
