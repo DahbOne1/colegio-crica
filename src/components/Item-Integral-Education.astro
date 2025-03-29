@@ -1,26 +1,32 @@
 ---
-export interface Props {
-    name: string
-    description: string
-    urlImage: string
-    descriptionImage: string
-}
-const {name, description, urlImage, descriptionImage} = Astro.props
+const { itemIntegralEducation } = Astro.props;
+
 import ReadMore from './icons/Read-more.astro'
+
 ---
 
-<div class=`cursor-pointer hover:scale-105 transition-all relative w-60`>
-    <img src={urlImage} alt={descriptionImage} class="h-96 w-full rounded-2xl object-cover">
-    <div class="w-full absolute bottom-0 left-0 font-semibold text-xl text-[#f2f9fd] p-3">
-        <h4 class="font-bold text-md">{name}</h4>
-        <!-- Modal toggle -->
-        <button id={name} data-modal-target="default-modal" data-modal-toggle="default-modal" class="mt-5 flex w-full text-[#f9fbfb] bg-[#217aa1] hover:bg-[#217aa1]/80  font-medium rounded-md text-sm py-1 px-3 text-left" type="button">
+
+<div class=`cursor-pointer hover:scale-105 transition-all relative w-72 md:w-80 lg:w-64`>
+    <img src={itemIntegralEducation.urlImage} alt={itemIntegralEducation.descriptionImage} class="object-cover rounded-2xl h-96 w-full">
+    <div class="w-full absolute bottom-0 left-0 font-semibold text-xl text-[#f2f9fd] p-3 mx-auto bg-black bg-opacity-20 rounded-b-2xl">
+        <h4 class="font-bold text-md">{itemIntegralEducation.name}</h4>
+        <!-- Modal toggle --->
+        <button data-urlImgDesc={itemIntegralEducation.descriptionImage} data-urlImg={itemIntegralEducation.urlImage} data-text={itemIntegralEducation.text} id={itemIntegralEducation.name} class="openModal mt-5 flex w-full text-[#f9fbfb] bg-[#217aa1] hover:bg-[#217aa1]/80  font-medium rounded-md text-sm py-1 px-3 text-left">
             Leer mas
             <ReadMore></ReadMore>
         </button>
-    </div>
-
-    
-    
+    </div>    
 </div>
 
+<script>
+     //Abrir modal
+     const modal = document.getElementById('modal');
+
+    const buttons = document.querySelectorAll('button.openModal');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            modal?.classList.remove('hidden');
+            modal?.classList.add('flex');
+        });
+    });
+</script>

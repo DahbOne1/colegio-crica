@@ -1,8 +1,12 @@
 ---
+import { any } from 'astro:schema';
+import ItemIntegralEducation from './Item-Integral-Education.astro';
+import Modal from './Modal.astro';
+
 const ITEMS_INTEGRAL_EDUCATION = [
     {
         name:"Principios cristianos",
-        description: `En nuestro colegio, creemos en la formación integral de cada estudiante, desarrollando su espíritu, cuerpo y alma para que vivan con propósito y sean personas de impacto en su comunidad. Nos enfocamos en brindar una educación que trascienda lo académico y lo profesional, ayudándoles a formar un carácter sólido y un estilo de vida basado en principios eternos.
+        text: `En nuestro colegio, creemos en la formación integral de cada estudiante, desarrollando su espíritu, cuerpo y alma para que vivan con propósito y sean personas de impacto en su comunidad. Nos enfocamos en brindar una educación que trascienda lo académico y lo profesional, ayudándoles a formar un carácter sólido y un estilo de vida basado en principios eternos.
         Nuestros estudiantes a vivir con amor, honestidad y excelencia. Más allá de la religión, buscamos inculcar valores universales que guíen a nuestros alumnos en cada etapa de su vida.
         `,
         urlImage: "src/images/complements/christianPrincipies.webp",
@@ -10,18 +14,9 @@ const ITEMS_INTEGRAL_EDUCATION = [
     },
     {
         name:"Talleres artísticos y deportivos",
-        description: `En nuestro colegio cristiano, ofrecemos una amplia variedad de talleres artísticos y deportivos diseñados para potenciar las habilidades y talentos de nuestros estudiantes en un ambiente saludable y enriquecedor.
-            Voleibol: Mejora tu coordinación, trabajo en equipo y espíritu deportivo.
-            Ping Pong: Entrena tus reflejos y concentración en este dinámico deporte de mesa.
-            Fútbol: Aprende técnica, estrategia y valores como la disciplina y el respeto.
-            Artes: Expresa tu creatividad a través de dibujo, pintura y manualidades.
-            Música: Desarrolla tus habilidades musicales con instrumentos y teoría básica.
-            Matemáticas: Refuerza tus conocimientos con divertidas actividades de resolución de problemas.
-            Lectura: Fomenta el hábito de leer y explora historias que inspiran y educan.
-            Días: De lunes a viernes.
-            Horario: De 3:00 p.m. a 4:00 p.m. en las instalaciones del colegio.
-            Duración: 1 hora de actividades dinámicas y personalizadas para cada grupo.
-            ensando en la comodidad de nuestras familias, ofrecemos diferentes modalidades de inscripción:
+        text: `En nuestro colegio, ofrecemos una amplia variedad de talleres artísticos y deportivos diseñados para potenciar las habilidades y talentos de nuestros estudiantes en un ambiente saludable y enriquecedor.
+            Contamos con talleres de voleibol, ping pong, fútbol, artes y música, así como actividades de matemáticas y lectura. Cada taller está dirigido por profesionales capacitados que guiarán a los estudiantes en su desarrollo personal y académico.     
+            De lunes a viernes en un horario de 3:00 p.m. a 4:00 p.m. en las instalaciones del colegio.
             Por día: Asiste al taller de tu preferencia en días específicos.
             Por semana: Disfruta de una semana completa de actividades en un taller.
             Por dos semanas: Profundiza en tu aprendizaje con 14 días de participación.
@@ -32,46 +27,80 @@ const ITEMS_INTEGRAL_EDUCATION = [
     },
     {
         name:"Educación financiera",
-        description: `En nuestro compromiso con una formación integral, hemos añadido la educación financiera como una actividad complementaria a las clases regulares. Esta iniciativa tiene como objetivo proporcionar a nuestros estudiantes herramientas prácticas para gestionar sus recursos de manera responsable y tomar decisiones financieras informadas.
+        text: `En nuestro compromiso con una formación integral, hemos añadido la educación financiera como una actividad complementaria a las clases regulares. Esta iniciativa tiene como objetivo proporcionar a nuestros estudiantes herramientas prácticas para gestionar sus recursos de manera responsable y tomar decisiones financieras informadas.
         Nuestra educación financiera no es solo una materia, sino una herramienta para formar líderes responsables y conscientes del impacto de sus decisiones en su vida y en la sociedad. En cada sesión, reforzamos valores como la responsabilidad, la disciplina y la mayordomía de los recursos.
         `,
-        urlImage: "src/images/complements/",
+        urlImage: "src/images/complements/FinancialEducation.webp",
         descriptionImage: "Imagen de los libros aprendiendo educación financiera en los salones del Colegio Crica A. C.",
     },
     {
         name:"Lenguas extranjeras",
-        description: `En nuestro colegio, entendemos que el dominio de lenguas extranjeras es clave para el desarrollo académico, cultural y profesional de nuestros estudiantes. Por ello, hemos incorporado clases de francés, inglés e italiano en distintos niveles educativos, adaptadas a las necesidades y capacidades de cada etapa escolar.
+        text: `En nuestro colegio, entendemos que el dominio de lenguas extranjeras es clave para el desarrollo académico, cultural y profesional de nuestros estudiantes. Por ello, hemos incorporado clases de francés, inglés e italiano en distintos niveles educativos, adaptadas a las necesidades y capacidades de cada etapa escolar.
         Nuestro objetivo es que cada estudiante pueda comunicarse con confianza en más de un idioma, abriendo oportunidades tanto en su educación futura como en su vida profesional. Además, cada clase fomenta valores de respeto, tolerancia y aprecio por la diversidad cultural.
         `,
-        urlImage: "src/images/complements/",
+        urlImage: "src/images/complements/ForeignLenguages.webp",
         descriptionImage: "Imagen de los maestros de ingles dando clases en los salones del Colegio Crica A. C.",
     },
 ]
-import ItemIntegralEducation from "./Item-Integral-Education.astro"
-import Modal from "./Modal.astro"
+
+
 ---
 
-<secton class="my-32">
+<secton class="md:my-32">
     <h2 class="font-extrabold text-5xl my-4 text-[#266388] text-center">EDUCACIÓN INTEGRAL</h2>
 
     <article class="flex py-5 items-center w-full mx-auto">
-        <div class="bg-[#3aa0cd]/20 w-full h-72">
+        <div class="hidden lg:block lg:bg-[#3aa0cd]/20 lg:w-full lg:h-72">
             <br>
         </div>
-        <ol class="flex gap-4 w-4/5 justify-center">
+        <ol class="mx-4 flex gap-6 justify-center items-center flex-wrap md:mx-2 lg:flex-nowrap lg:w-4/5 lg:mx-0">
             {
                 ITEMS_INTEGRAL_EDUCATION.map((itemIntegralEducation)=>(
-                    <li >
-                        <ItemIntegralEducation {...itemIntegralEducation} >      </ItemIntegralEducation>  
+
+                    <li class="flex justify-center">
+                        <ItemIntegralEducation key={itemIntegralEducation.name} itemIntegralEducation={itemIntegralEducation} >      </ItemIntegralEducation>  
 
                     </li>
                 ))
                
             }
         </ol>       
-        <div class="bg-[#3aa0cd]/20 w-full h-72">
+        <div class="hidden lg:block lg:bg-[#3aa0cd]/20 lg:w-full lg:h-72">
             <br>
         </div> 
     </article>
 </secton>
 
+<Modal client:visible/>
+
+<script >
+    
+    let imgModal = document.getElementById('imgModal');
+
+    const items = document.querySelectorAll('button.openModal');
+    items.forEach((item) => {
+        item.addEventListener('click', () => {
+            //recuperamos el id del item seleccionado
+            let itemSelected = item.id
+            let itemSelectedUrl = item.getAttribute('data-urlImg');
+            let itemSelectedText = item.getAttribute('data-text');
+            let itemSelectedUrlImDesc = item.getAttribute('data-urlImgDesc');
+
+            //creamos variables para personalizar el modal
+            let nameModal = document.getElementById('nameModal');
+            let textModal = document.getElementById('textModal');
+            let imgModal = document.getElementById('imgModal');
+
+            if (nameModal) {
+                nameModal.innerText = itemSelected; // Safe assignment
+            }
+            if (textModal) {
+                textModal.innerText = itemSelectedText ?? ''; // Safe assignment with fallback
+            }
+            if (imgModal) {
+                imgModal.setAttribute("src", itemSelectedUrl ?? ""); // Safe assignment
+                imgModal.setAttribute("alt", itemSelectedUrl ?? ""); // Safe assignment
+            }
+        });
+    });
+</script>

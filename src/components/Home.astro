@@ -5,15 +5,15 @@ import BGHome from '../images/bg-home.webp'
 import School from '../components/icons/School.astro'
 ---
 
-<section class="w-full flex flex-col md:flex-row">
-    <div class="w-full h-screen flex items-center md:w-7/12">
-        <div class="w-full flex flex-col items-start justify-center px-5 bg-[#3aa0cd]/20 py-10 text-[#266388] md:pl-10">
-            <h1 class="text-4xl font-extrabold md:text-5xl">EDUCAR EN INTEGRIDAD PARA SERVIR CON EXCELENCIA</h1>
-            <span class="text-2xl mt-3 w-4/5 font-semibold">Enseñanza, visión y conducta en principios y valores cristianos.</span>
-            <a href="/registrations" class="flex gap-2 mt-4 py-1 px-2 hover:bg-[#f9fbfb] hover:text-[#217aa1] bg-[#217aa1]  text-[#f9fbfb] transition-all rounded-md font-medium"> <School class="rotate-90"></School>  Inscribirme</a>
+<section class="w-full flex flex-col lg:flex-row ">
+    <div class="w-full flex items-center lg:w-7/12 lg:h-screen">
+        <div class="w-full flex flex-col items-start justify-center px-2 py-16 bg-[#3aa0cd]/20 text-[#266388] md:py-48  lg:pl-10 lg:py-10 ">
+            <h1 class="text-5xl font-extrabold md:text-5xl">EDUCAR EN INTEGRIDAD PARA SERVIR CON EXCELENCIA</h1>
+            <span class="text-3xl mt-3 w-4/5 font-semibold">Enseñanza, visión y conducta en principios y valores cristianos.</span>
+            <a href="/registrations" class="text-sm flex gap-2 mt-4 py-1 px-2 hover:bg-[#f9fbfb] hover:text-[#217aa1] bg-[#217aa1]  text-[#f9fbfb] transition-all rounded-md font-medium"> <School class="rotate-90"></School>  Inscribirme</a>
         </div>
     </div>
     
-    <img src={BGHome.src} alt="Imagen edificio principal del Colegio Crica en Chilpancingo, Guerrero" class="w-full h-screen object-cover object-left-top md:w-5/12 md:rounded-l-3xl">
+    <img src={BGHome.src} alt="Imagen edificio principal del Colegio Crica en Chilpancingo, Guerrero" class="w-full rounded-3xl object-cover object-left-top lg:h-screen lg:w-5/12 lg:rounded-none lg:rounded-l-3xl">
 
 </section>

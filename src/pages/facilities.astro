@@ -10,42 +10,42 @@ import Footer from '../components/Footer.astro';
 	<Header></Header>
 	<main class="pt-28 pb-10">
 		<section class="w-11/12 mx-auto py-3 text-[#266388]">
-			<h3 class="text-6xl font-bold text-center">
+			<h3 class="text-4xl font-bold text-center md:text-6xl">
 				Galeria de fotos de nuestra institución
 			</h3>
-			<span class="block text-xl mt-2 font-semibold text-center mx-auto">
+			<span class="block text-lg mt-2 font-semibold text-center mx-auto md:text-xl">
 				Conoce todos los espacios donde los alumnos aprenden, conviven y se divierten a traves de nuestro recorrido virtual.
 			</span>
 		</section>
-		<section class="grid grid-cols-8 w-11/12 mx-auto gap-4 gallery py-5 ">
+		<section class="grid grids-cols-1 md:grid-cols-8 w-11/12 mx-auto gap-4 gallery py-5">
 			<!---Primera fila -->
-			<div class="rounded-xl col-start-1 col-span-3 row-span-2 bg-[url('/src/images/gallery/Bancas.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-4 col-span-2 row-span-3 bg-[url('/src/images/gallery/PasilloMaestro.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-6 col-span-1 row-span-4 bg-[url('/src/images/gallery/Alumna.webp')] bg-cover bg-top"></div>
-			<div class="rounded-xl col-start-7 col-span-2 row-span-1 bg-[url('/src/images/gallery/ComidaPrimaria.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-1 md:col-span-3 md:row-span-2 bg-[url('/src/images/gallery/Bancas.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-4 md:col-span-2 md:row-span-3 bg-[url('/src/images/gallery/PasilloMaestro.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-6 md:col-span-1 md:row-span-4 bg-[url('/src/images/gallery/Alumna.webp')] bg-cover bg-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-7 md:col-span-2 md:row-span-1 bg-[url('/src/images/gallery/ComidaPrimaria.webp')] bg-cover bg-left-top"></div>
 			
 			<!---Segunda fila -->
-			<div class="rounded-xl col-start-1 col-span-3 row-span-2 bg-[url('/src/images/gallery/Bandera.webp')] bg-cover bg-center"></div>
-			<div class="rounded-xl col-start-4 col-span-2 row-span-1 bg-[url('/src/images/gallery/Canchas.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-7 col-span-2 row-start-2 row-span-3 bg-[url('/src/images//gallery/Proyectores.webp')] bg-cover bg-center"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-1 md:col-span-3 md:row-span-2 bg-[url('/src/images/gallery/Bandera.webp')] bg-cover bg-center"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-4 md:col-span-2 md:row-span-1 bg-[url('/src/images/gallery/Canchas.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-7 md:col-span-2 md:row-start-2 md:row-span-3 bg-[url('/src/images//gallery/Proyectores.webp')] bg-cover bg-center"></div>
 			
 			<!---Tercera fila -->
-			<div class="rounded-xl col-start-1 col-span-4 row-span-1 bg-[url('/src/images/gallery/Homenaje.webp')] bg-cover bg-center"></div>
-			<div class="rounded-xl col-start-5 col-span-1 row-span-1 bg-[url('/src/images/gallery/Mural.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-6 col-span-1 row-span-3 bg-[url('/src/images/gallery/Comedor.webp')] bg-cover bg-right"></div>
-			<div class="rounded-xl col-start-7 col-span-2 row-span-3 bg-[url('/src/images/gallery/Pasillos.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-1 md:col-span-4 md:row-span-1 bg-[url('/src/images/gallery/Homenaje.webp')] bg-cover bg-center"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-5 md:col-span-1 md:row-span-1 bg-[url('/src/images/gallery/Mural.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-6 md:col-span-1 md:row-span-3 bg-[url('/src/images/gallery/Comedor.webp')] bg-cover bg-right"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-7 md:col-span-2 md:row-span-3 bg-[url('/src/images/gallery/Pasillos.webp')] bg-cover bg-left-top"></div>
 
 			<!---Cuarta fila -->
-			<div class="rounded-xl col-start-1 col-span-1 row-span-4 bg-[url('/src/images/gallery/ComidaBachillerato.webp')] bg-cover bg-bottom"></div>
-			<div class="rounded-xl col-start-2 col-span-1 row-span-4 bg-[url('/src/images/gallery/BancasArriba.webp')] bg-cover"></div>
-			<div class="rounded-xl col-start-3 col-span-3 row-span-3 bg-[url('/src/images/gallery/SalonSecundaria.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-6 col-span-3 row-span-3 bg-[url('/src/images/gallery/SalonPrimaria.webp')] bg-cover bg-right-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-1 md:col-span-1 md:row-span-4 bg-[url('/src/images/gallery/ComidaBachillerato.webp')] bg-cover bg-bottom"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-2 md:col-span-1 md:row-span-4 bg-[url('/src/images/gallery/BancasArriba.webp')] bg-cover"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-3 md:col-span-3 md:row-span-3 bg-[url('/src/images/gallery/SalonSecundaria.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-6 md:col-span-3 md:row-span-3 bg-[url('/src/images/gallery/SalonPrimaria.webp')] bg-cover bg-right-top"></div>
 
 			<!---Quinta fila -->
-			<div class="rounded-xl col-start-1 col-span-1 row-span-1 bg-[url('/src/images/gallery/PinPon.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-2 col-span-1 row-span-1 bg-[url('/src/images/gallery/Edificios.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-3 col-span-2 row-start-9 row-span-2 bg-[url('/src/images/gallery/ClasesPrimaria.webp')] bg-cover bg-left-top"></div>
-			<div class="rounded-xl col-start-5 col-span-1 row-start-9 row-span-2 bg-[url('/src/images/gallery/Futbol.webp')] bg-cover bg-center"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-1 md:col-span-1 md:row-span-1 bg-[url('/src/images/gallery/PinPon.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-2 md:col-span-1 md:row-span-1 bg-[url('/src/images/gallery/Edificios.webp')] bg-cover bg-left-top"></div>
+			<div class="rounded-xl h-60 md:h-auto col-start-1 col-span-1 md:col-start-3 md:col-span-2 md:row-start-9 md:row-span-2 bg-[url('/src/images/gallery/ClasesPrimaria.webp')] bg-cover bg-left-top"></div>
+			<div class="hidden rounded-xl h-60 md:block md:h-auto col-start-1 col-span-1 md:col-start-5 md:col-span-1 md:row-start-9 md:row-span-2 bg-[url('/src/images/gallery/Futbol.webp')] bg-cover bg-center lg:block"></div>
 		  </section>
 	</main>
 	<Footer></Footer>		

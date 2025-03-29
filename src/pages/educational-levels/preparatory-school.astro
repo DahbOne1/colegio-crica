@@ -4,7 +4,7 @@ import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import {Image} from 'astro:assets'
 
-
+/*
 const ITEMS_SEMESTERS = [
 {
     numberSemester: "1",
@@ -121,7 +121,86 @@ const ITEMS_SEMESTERS = [
             11: ""
         }
     ]
-}]
+}]*/
+
+const ITEMS_SEMESTERS = [
+{
+    numberSemester: "1",
+    nameSemester: "Primer semestre",
+    subjects:[
+        {
+            1: "Informática I",
+            2: "Actividades para escolares I",
+            3: "Vision empresarial",
+            4: "Frances I",
+            5: "Formación de vida"
+        }
+    ]
+    
+},
+{
+    numberSemester: "2",
+    nameSemester: "Segundo semestre",
+    subjects:[
+        {
+            1: "Informática II",
+            2: "Actividades para escolares II",
+            3: "Vision empresarial",
+            4: "Italiano II",
+            5: "Formación de vida"
+            
+        }
+    ]
+},
+{
+    numberSemester: "3",
+    nameSemester: "Tercer semestre",
+    subjects:[
+        {
+            1: "Actividades para escolares III",
+            2: "Vision empresarial",
+            3: "Italiano III",
+            4: "Formación de vida",
+        }
+    ]
+},
+{
+    numberSemester: "4",
+    nameSemester: "Cuarto semestre",
+    subjects:[
+        {
+            1: "Actividades para escolares IV",
+            2: "Vision empresarial",
+            3: "Frances IV",
+            4: "Formación de vida",
+        }
+    ]
+},
+{
+    numberSemester: "5",
+    nameSemester: "Quinto semestre",
+    subjects:[
+        {
+            1: "Actividades para escolares V",
+            2: "Vision empresarial",
+            3: "Frances V",
+            4: "Formación de vida",
+        }
+    ]
+},
+{
+    numberSemester: "6",
+    nameSemester: "Sexto semestre",
+    subjects:[
+        {
+            1: "Actividades para escolares VI",
+            2: "Vision empresarial",
+            3: "Frnces VI",
+            4: "Formación de vida",
+        }
+    ]
+}
+]
 
 const ITEMS_STUDY_AREAS=[
 {
@@ -200,13 +279,13 @@ const ITEMS_STUDY_AREAS=[
                                         <li>{subjects[2]}</li>
                                         <li>{subjects[3]}</li>
                                         <li>{subjects[4]}</li>
-                                        <li>{subjects[5]}</li>
+                                       /*<li>{subjects[5]}</li>
                                         <li>{subjects[6]}</li>
                                         <li>{subjects[7]}</li>
                                         <li>{subjects[8]}</li>
                                         <li>{subjects[9]}</li>
                                         <li>{subjects[10]}</li>
-                                        <li>{subjects[11]}</li>
+                                        <li>{subjects[11]}</li>*/
                                     ))
                                     }
                                 </ul>
