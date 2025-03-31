@@ -82,8 +82,8 @@ const ITEMS_INTEGRAL_EDUCATION = [
         item.addEventListener('click', () => {
             //recuperamos el id del item seleccionado
             let itemSelected = item.id
-            let itemSelectedUrl = item.getAttribute('data-urlImg');
-            let itemSelectedText = `"`+ item.getAttribute('data-text') + `"`;
+            let itemSelectedUrl = `"`+ item.getAttribute('data-urlImg')  + `"`;
+            let itemSelectedText = item.getAttribute('data-text');
             let itemSelectedUrlImgDesc = item.getAttribute('data-urlImgDesc');
 
             //creamos variables para personalizar el modal
