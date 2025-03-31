@@ -83,8 +83,8 @@ const ITEMS_INTEGRAL_EDUCATION = [
             //recuperamos el id del item seleccionado
             let itemSelected = item.id
             let itemSelectedUrl = item.getAttribute('data-urlImg');
-            let itemSelectedText = item.getAttribute('data-text');
-            let itemSelectedUrlImDesc = item.getAttribute('data-urlImgDesc');
+            let itemSelectedText = `"`+ item.getAttribute('data-text') + `"`;
+            let itemSelectedUrlImgDesc = item.getAttribute('data-urlImgDesc');
 
             //creamos variables para personalizar el modal
             let nameModal = document.getElementById('nameModal');
@@ -99,7 +99,7 @@ const ITEMS_INTEGRAL_EDUCATION = [
             }
             if (imgModal) {
                 imgModal.setAttribute("src", itemSelectedUrl ?? ""); // Safe assignment
-                imgModal.setAttribute("alt", itemSelectedUrl ?? ""); // Safe assignment
+                imgModal.setAttribute("alt", itemSelectedUrlImgDesc ?? ""); // Safe assignment
             }
         });
     });

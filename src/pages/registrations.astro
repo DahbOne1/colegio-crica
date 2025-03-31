@@ -15,7 +15,7 @@ import BGHome from '../images/bg-home.webp'
 					<h7 class="text-4xl font-extrabold">SOLICITA UNA CITA CON NOSOTROS</h7>
 					<p class="py-4 text-justify">Para nosotros es importante conocerte, deja tus datos y nos pondremos en contacto via correo electronico o whatsApp en un maximo de 3 dias habiles.</p>
 				</div>
-				<form action="" class="w-full bg-[#3aa0cd]/20 flex flex-col justify-center items-start gap-3 px-20 py-8 lg:py-4">
+				<form action="https://formsubmit.co/9003251b636c8294cd4e075fa39b1579" method="POST" class="w-full bg-[#3aa0cd]/20 flex flex-col justify-center items-start gap-3 px-20 py-8 lg:py-4">
 					<label class="flex flex-col" for="">Nombre de padre, madre o tutor
 					<input class="h-5 bg-transparent border-0 border-b-2 border-b-[#266388] text-sm focus:ring-0  focus:border-b-[#266388] placeholder:text-gray-500 placeholder:italic" type="text"></label>
 					<label class="flex flex-col" for="">Nombre del alumno interesado a inscribir
@@ -26,7 +26,13 @@ import BGHome from '../images/bg-home.webp'
 					<input class="h-5 bg-transparent border-0 border-b-2 border-b-[#266388] text-sm focus:ring-0  focus:border-b-[#266388] placeholder:text-gray-500 placeholder:italic" type="text"></label>
 					<label class="flex flex-col" for="">Correo electrónico
 					<input class="h-5 bg-transparent border-0 border-b-2 border-b-[#266388] text-sm focus:ring-0  focus:border-b-[#266388] placeholder:text-gray-500 placeholder:italic" type="text"></label>
-					<button class="bg-[#266388] mt-4 py-1 px-4 rounded-sm text-[#f2f9fd]">Enviar</button>
+					<input type="hidden" name="_captcha" value="false" />
+					 <!-- Evita captcha automático -->
+						<input type="hidden" name="_captcha" value="false" />
+
+						<!-- Redirige después de enviar -->
+						<input type="hidden" name="_next" value="http://localhost:4321/colegio-crica/thanks/" />
+					<button type="submit" class="bg-[#266388] mt-4 py-1 px-4 rounded-sm text-[#f2f9fd]">Enviar</button>
 				</form>
 			</article>
 			<div class="w-full lg:w-1/2">
