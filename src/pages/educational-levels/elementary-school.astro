@@ -2,6 +2,9 @@
 import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
+import {Image} from 'astro:assets'
+import ElementaryImg from '../../images/complements/ElementarySchool.webp'
+import PhilosophyImg from '../../images/complements/philosophy.webp'
 ---
 
 <Layout title="Colegio Crica A. C. - Educar en integridad para servir con excelencia. | Colegio privado con principios cristianos en Chilpancingo de los Bravo, Guerrero.">
@@ -14,7 +17,7 @@ import Footer from "../../components/Footer.astro"
 					<span class="text-justify mt-2 font-semibold text-2xl">Acompañamiento a nuestros estudiantes</span>
 					<p class="mt-3">Nuestro plan de estudios equilibra el desarrollo de habilidades intelectuales con el fortalecimiento de valores y el trabajo colaborativo.</p>
 				</div>
-				<img src="/src/images/complements/philosophy.webp"  class="w-11/12 md:w-5/12 h-60 rounded-lg object-cover">
+				<img src={PhilosophyImg.src} class="w-11/12 md:w-5/12 h-60 rounded-lg object-cover">
 				<div class="hidden md:block w-1/12 bg-[#3aa0cd]/20 h-52">
 					<br>
 				   </div>
@@ -31,7 +34,7 @@ import Footer from "../../components/Footer.astro"
 				<div class="hidden md:block w-1/12 bg-[#3aa0cd]/20 h-52">
 					<br>
 				   </div>
-				<img src="/src/images/complements/ElementarySchool.webp"  class="w-11/12 md:w-5/12 h-60 rounded-lg object-cover">
+				<img src={ElementaryImg.src}  class="w-11/12 md:w-5/12 h-60 rounded-lg object-cover">
 				<div class="w-full  mt-8 md:mt-0 bg-[#3aa0cd]/20 md:w-6/12 px-10 py-16">
 					<span class="text-justify mt-2 font-semibold text-2xl">Aprendizaje diferenciado</span>
 					<p class="mt-3">A lo largo de esta etapa, brindamos un ambiente inclusivo donde cada estudiante recibe apoyo según su ritmo de aprendizaje.</p>

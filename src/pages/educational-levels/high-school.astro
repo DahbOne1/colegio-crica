@@ -1,7 +1,9 @@
 ---
+import {Image} from 'astro:assets'
 import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
+import HighSchoolImg from "../../images/complements/HighSchool.webp"
 ---
 
 <Layout title="Colegio Crica A. C. - Educar en integridad para servir con excelencia. | Colegio privado con principios cristianos en Chilpancingo de los Bravo, Guerrero.">
@@ -13,7 +15,7 @@ import Footer from "../../components/Footer.astro"
 				<div class="w-1/12 md:w-3/12 bg-[#3aa0cd]/20 h-52">
 					<br>
 				   </div>
-				<img src="/src/images/complements/HighSchool.webp"  class="w-10/12 md:w-6/12 h-60 rounded-lg object-cover">
+				<img src={HighSchoolImg.src}  class="w-10/12 md:w-6/12 h-60 rounded-lg object-cover">
 				<div class="w-1/12 bg-[#3aa0cd]/20 md:w-3/12 h-52">
 					<br>
 				</div>
